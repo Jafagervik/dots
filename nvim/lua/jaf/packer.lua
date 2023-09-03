@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
 
     use "savq/melange-nvim"
 
+    use 'christoomey/vim-tmux-navigator'
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
@@ -40,10 +42,6 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
-    -- comments
-    use "Djancyp/better-comments.nvim"
-
 
     use("ggandor/leap.nvim")
 
