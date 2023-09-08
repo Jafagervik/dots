@@ -5,14 +5,14 @@ local function font_with_fallback(name, params)
     return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "JetBrainsMonoNL NF"
+--local font_name = "JetBrainsMonoNL NF"
+local font_name = "Fira Code"
 
 return {
     -- OpenGL for GPU acceleration, Software for CPU
     front_end = "OpenGL",
 
-    -- color_scheme = 'Catppuccin Mocha',
-    color_scheme = 'rose-pine-moon',
+    color_scheme = 'Catppuccin Mocha',
 
     -- Font config
     font = font_with_fallback(font_name),
@@ -23,42 +23,45 @@ return {
         },
         {
             italic = false,
-            font = font_with_fallback(font_name, { bold = true }),
+            font = font_with_fallback(font_name, { bold = false }),
         },
         {
             intensity = "Bold",
-            font = font_with_fallback(font_name, { bold = true }),
+            font = font_with_fallback(font_name, { bold = false }),
         },
     },
     warn_about_missing_glyphs = false,
-    font_size = 13,
+    font_size = 12,
     line_height = 1.1,
-    dpi = 92.0,
+    dpi = 100.0,
+
+    -- window_background_image = "~/.wallpapers/japan.png",
 
     -- Cursor style
     -- default_cursor_style = "BlinkingUnderline",
     default_cursor_style = "SteadyBlock",
 
     -- X11
-    enable_wayland = true,
+    enable_wayland = false,
 
     -- Keybinds
     disable_default_key_bindings = true,
     keys = {
         {
             key = [[\]],
-            mods = "CTRL|ALT",
+            mods = "CTRL",
             action = wezterm.action({
                 SplitHorizontal = { domain = "CurrentPaneDomain" },
             }),
         },
         {
-            key = [[\]],
+            key = [[']],
             mods = "CTRL",
             action = wezterm.action({
                 SplitVertical = { domain = "CurrentPaneDomain" },
             }),
         },
+
         {
             key = "q",
             mods = "CTRL",
@@ -160,7 +163,7 @@ return {
     -- General
     automatically_reload_config = true,
     inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
-    window_background_opacity = 0.5,
+    window_background_opacity = 0.97,
     window_close_confirmation = "NeverPrompt",
     window_frame = { active_titlebar_bg = "#45475a", font = font_with_fallback(font_name, { bold = true }) },
 }
