@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    -- vim tutroial
+    use 'ThePrimeagen/vim-be-good'
+
     -- git
     use({
         "kdheepak/lazygit.nvim",
