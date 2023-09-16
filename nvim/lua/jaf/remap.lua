@@ -7,7 +7,7 @@ key.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 key.set("n", "<leader>t", "<cmd>TroubleToggle<CR>")
 
 -- Mason
-key.set("n", "<leader>l", ":Mason<CR>")
+key.set("n", "<leader>m", ":Mason<CR>")
 
 key.set("v", "J", ":m '>+1<CR>gv=gv")
 key.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -62,3 +62,10 @@ key.set("n", "<leader>g", ":LazyGit<CR>", { silent = true })
 key.set("n", "<leader>re", function()
     vim.cmd("so")
 end)
+
+-- latex
+key.set("n", "<leader>lc", "<cmd> VimtexCompile<CR>", { silent = true })
+
+-- split
+key.set("n", "<leader>vs", "<cmd> split<CR>", { silent = true })
+key.set("n", "<leader>q", "<cmd> q<CR>", { silent = true })

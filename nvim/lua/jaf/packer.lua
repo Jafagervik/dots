@@ -14,12 +14,21 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     use "savq/melange-nvim"
 
-    use 'christoomey/vim-tmux-navigator'
+    use "lunarvim/templeos.nvim"
 
+    use {
+        'lervag/vimtex',
+        opt = true,
+        config = function()
+            vim.g.vimtex_view_general_viewer = 'okular'
+            vim.g.tex_comment_nospell = 1
+        end,
+        ft = 'tex'
+    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
@@ -83,9 +92,6 @@ return require('packer').startup(function(use)
         config = function()
             require("trouble").setup {
                 icons = false,
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
             }
         end
     })
@@ -97,6 +103,9 @@ return require('packer').startup(function(use)
 
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
+
+    -- game of life
+    use 'eandrju/cellular-automaton.nvim'
 
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
@@ -119,14 +128,29 @@ return require('packer').startup(function(use)
         },
     })
 
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
+    use({
+        "Pocco81/true-zen.nvim",
+    })
+
+    use 'kylechui/nvim-surround'
+
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+        branch = 'v2.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
+            { 'jay-babu/mason-nvim-dap.nvim' },
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
@@ -137,8 +161,9 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
-            { 'L3MON4D3/LuaSnip' },
+            { 'L3MON4D3/LuaSnip',                 version = "2.*" },
             { 'rafamadriz/friendly-snippets' },
+            { 'honza/vim-snippets' },
         }
     }
 

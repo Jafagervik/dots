@@ -6,10 +6,13 @@ lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
     'julials',
+    'clangd',
+    'lua_ls',
+    'pylsp',
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
@@ -38,10 +41,10 @@ lsp.setup_nvim_cmp({
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
+        error = '',
+        warn = '',
+        hint = '󰘥',
+        info = ''
     }
 })
 
@@ -70,9 +73,7 @@ lsp.format_on_save({
         ['rust_analyzer'] = { 'rust' },
         ['julials'] = { 'julia' },
         ['pylsp'] = { 'python' },
-        -- if you have a working setup with null-ls
-        -- you can specify filetypes it can format.
-        -- ['null-ls'] = {'javascript', 'typescript'},
+        ['clangd'] = { 'c', 'cpp' }
     }
 })
 
