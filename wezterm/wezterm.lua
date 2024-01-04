@@ -22,7 +22,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.925
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000

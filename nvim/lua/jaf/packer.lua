@@ -14,9 +14,12 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use 'KabbAmine/yowish.vim'
 
-    use "savq/melange-nvim"
+    use 'NLKNguyen/papercolor-theme'
+
+    use 'nyngwang/nvimgelion'
+
 
     use "lunarvim/templeos.nvim"
 
@@ -33,9 +36,6 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-
-    -- vim tutroial
-    use 'ThePrimeagen/vim-be-good'
 
     -- git
     use({
