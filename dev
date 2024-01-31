@@ -9,7 +9,7 @@ mkdir -p "$config_dir"
 for folder in */; do
   if [ -d "$folder" ]; then
     # Create a symbolic link to the .config folder
-    ln -s "$current_dir/$folder" "$config_dir/$folder"
+    ln -s "$current_dir/$folder" "$config_dir/"
   fi
 done
 
