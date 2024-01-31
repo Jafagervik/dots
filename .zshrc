@@ -106,6 +106,7 @@ alias gp="git push"
 alias gc="git commit"
 alias gpl="git pull"
 alias gf="git fetch"
+alias conf="cd ~/.config"
 
 # >>> juliaup initialize >>>
 

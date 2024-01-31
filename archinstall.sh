@@ -16,3 +16,7 @@ sudo pacman -S btop neofetch onefetch wezterm vim lolcat parallel waybar-hyprlan
 
 # set up hyprlinks
 ~/dots/dev
+
+# set up git 
+
+
