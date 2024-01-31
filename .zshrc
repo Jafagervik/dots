@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="arrow"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting poetry)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,12 +115,23 @@ alias dots="v ~/dots/"
 alias vc="nvim $XDG_CONFIG_HOME"
 alias auge="cd ~/work/auge/"
 alias emr="cd ~/uni/Emerald"
+ 
+# spotify 
+alias sapply="spicetify apply"
+alias stheme="spicetify config current_theme"
+alias sswitch="spicetify config color_scheme"
 
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
 
-path=('/home/jaf/.juliaup/bin' '/opt/cuda/bin/' $path)
+path=(
+    '/home/jaf/.juliaup/bin' 
+    '/opt/cuda/bin/' 
+    '/home/jaf/.local/bin'
+    '/home/jaf/.local/'
+    $path
+)
 export PATH
 export CUDA_HOME="/opt/cuda/"
 
@@ -129,3 +140,5 @@ export CUDA_HOME="/opt/cuda/"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export PATH=$PATH:/home/jaf/.spicetify
