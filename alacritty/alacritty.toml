@@ -22,7 +22,7 @@ save_to_clipboard = true
 program = "/bin/zsh"
 
 [window]
-opacity = 0.925
+opacity = 0.5
 
 [window.padding]
 x = 4

@@ -103,14 +103,18 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias v="nvim"
 alias gs="git status"
 alias gp="git push"
-alias gc="git commit"
+alias gc="git clone"
+alias gcm="git commit"
 alias gpl="git pull"
 alias gf="git fetch"
 alias conf="cd ~/.config"
 alias gm="git merge"
 alias l="exa"
 alias lla="exa -la"
+alias dots="v ~/dots/"
 alias vc="nvim $XDG_CONFIG_HOME"
+alias auge="cd ~/work/auge/"
+alias emr="cd ~/uni/Emerald"
 
 # >>> juliaup initialize >>>
 
@@ -121,3 +125,7 @@ export PATH
 export CUDA_HOME="/opt/cuda/"
 
 # <<< juliaup initialize <<<
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

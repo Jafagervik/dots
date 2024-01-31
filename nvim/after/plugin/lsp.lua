@@ -73,7 +73,8 @@ lsp.format_on_save({
         ['rust_analyzer'] = { 'rust' },
         ['julials'] = { 'julia' },
         ['pylsp'] = { 'python' },
-        ['clangd'] = { 'c', 'cpp' }
+        ['clangd'] = { 'c', 'cpp' },
+        ['java_language_server'] = { 'java' }
     }
 })
 
