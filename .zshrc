@@ -70,7 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -107,6 +107,10 @@ alias gc="git commit"
 alias gpl="git pull"
 alias gf="git fetch"
 alias conf="cd ~/.config"
+alias gm="git merge"
+alias l="exa"
+alias lla="exa -la"
+alias vc="nvim $XDG_CONFIG_HOME"
 
 # >>> juliaup initialize >>>
 
@@ -114,6 +118,6 @@ alias conf="cd ~/.config"
 
 path=('/home/jaf/.juliaup/bin' '/opt/cuda/bin/' $path)
 export PATH
-export CUDA_HOME = "/opt/cuda/"
+export CUDA_HOME="/opt/cuda/"
 
 # <<< juliaup initialize <<<
