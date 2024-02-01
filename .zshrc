@@ -101,6 +101,8 @@ alias zshc="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 alias v="nvim"
+alias nf="neofetch"
+
 alias gs="git status"
 alias gp="git push"
 alias gc="git clone"
@@ -115,6 +117,7 @@ alias dots="v ~/dots/"
 alias vc="nvim $XDG_CONFIG_HOME"
 alias auge="cd ~/work/auge/"
 alias emr="cd ~/uni/Emerald"
+alias updall="sudo pacman -Syu"
  
 # spotify 
 alias sapply="spicetify apply"
