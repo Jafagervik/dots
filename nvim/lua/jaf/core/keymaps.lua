@@ -2,12 +2,7 @@ vim.g.mapleader = " "
 
 local key = vim.keymap
 
-key.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
-
 key.set("n", "<leader>t", "<cmd>TroubleToggle<CR>")
-
--- Mason
-key.set("n", "<leader>m", ":Mason<CR>")
 
 key.set("v", "J", ":m '>+1<CR>gv=gv")
 key.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -31,7 +26,7 @@ key.set("x", "<leader>p", [["_dP]])
 key.set({ "n", "v" }, "<leader>y", [["+y]])
 key.set("n", "<leader>Y", [["+Y]])
 
-key.set({ "n", "v" }, "<leader>d", [["_d]])
+key.set({ "n", "v" }, "<leader>pp", [["_d]])
 
 -- This is going to get me cancelled
 key.set("i", "<C-c>", "<Esc>")
@@ -41,6 +36,9 @@ key.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- format!
 key.set("n", "<leader>fo", vim.lsp.buf.format)
+
+-- julia help me ples
+key.set("n", "<leader>fj", "<cmd>JuliaFormatterFormat<CR>")
 
 key.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 key.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -54,9 +52,6 @@ key.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 key.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 key.set("n", "<leader>vpp", "<cmd>e ~/dots/nvim/lua/jaf/packer.lua<CR>");
-
--- lazygit
-key.set("n", "<leader>g", ":LazyGit<CR>", { silent = true })
 
 -- reload
 key.set("n", "<leader>re", function()

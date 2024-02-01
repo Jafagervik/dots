@@ -8,6 +8,10 @@ return {
 		-- import mason
 		local mason = require("mason")
 
+		local keymap = vim.keymap
+
+        keymap.set("n", "<leader>m", "<cmd>Mason<CR>")
+
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
 
