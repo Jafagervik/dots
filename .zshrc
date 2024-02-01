@@ -102,6 +102,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 alias v="nvim"
 alias nf="neofetch"
+alias hyperconf="nvim ~/dots/hypr/hyprland.conf"
 
 alias gs="git status"
 alias gp="git push"

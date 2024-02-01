@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/dots/kitty/kitty-themes
+
+cd ~/dots/kitty
+ln -s ./kitty-themes/themes/Arthur.conf ~/dots/kitty/theme.conf
