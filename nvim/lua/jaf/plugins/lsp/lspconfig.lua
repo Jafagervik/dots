@@ -87,6 +87,12 @@ return {
 			on_attach = on_attach,
 		})
 
+		-- configure julia server
+		lspconfig["julials"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		-- configure tailwindcss server
 		lspconfig["tailwindcss"].setup({
 			capabilities = capabilities,

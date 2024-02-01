@@ -134,6 +134,7 @@ path=(
     '/opt/cuda/bin/' 
     '/home/jaf/.local/bin'
     '/home/jaf/.local/'
+    '/home/jaf/dots/tmux/plugins/tpm/'
     $path
 )
 export PATH
@@ -146,3 +147,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export PATH=$PATH:/home/jaf/.spicetify
+
+neofetch
