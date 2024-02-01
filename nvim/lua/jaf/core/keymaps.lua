@@ -8,7 +8,6 @@ key.set("n", "<leader>t", "<cmd>TroubleToggle<CR>")
 
 -- Mason
 key.set("n", "<leader>m", ":Mason<CR>")
-key.set("n", "<leader>l", ":Lazy<CR>")
 
 key.set("v", "J", ":m '>+1<CR>gv=gv")
 key.set("v", "K", ":m '<-2<CR>gv=gv")
