@@ -46,7 +46,7 @@
     "tooltip": true,
     "exec": "echo '{\"text\":\"💧\",\"tooltip\":\"Drun | Run\"}'",
     "return-type": "json",
-    "on-click": "~/dots/hypr/scripts/rofilaunch.sh d",
+    "on-click": "rofi -show drun",
     "on-click-right": "~/dots/hypr/scripts/rofilaunch.sh w"
   },
   "custom/updates": {
@@ -55,7 +55,7 @@
     "format": "󱧘 {}",
     //"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",       // # of updates and tooltip details
     "exec": "~/dots/waybar/scripts/arch_updates.sh",
-    "on-click": "alacritty --class wm-floating --title all_is_kitty --hold --detach sh -c 'pacman -Syu'",
+    "on-click": "kitty --class wm-floating --title all_is_kitty --hold --detach sh -c 'pacman -Syu'",
     "tooltip": true
   },
   "cpu": {
@@ -67,7 +67,7 @@
     "format": "󰌢 {load}",
     "tooltip": false,
     "on-click": "missioncenter",
-    "on-click-right": "alacritty --class wm-floating --title all_is_kitty --hold --detach sh -c 'btop'"
+    "on-click-right": "kitty --class wm-floating --title all_is_kitty --hold --detach sh -c 'btop'"
   },
   "custom/gpu": {
     "interval": 1,
@@ -75,7 +75,7 @@
     "format": "󰢮 {}%",
     "return-type": "",
     "on-click": "missioncenter",
-    "on-click-right": "alacritty --class wm-floating --title all_is_kitty --hold --detach sh -c 'nvidia-smi'"
+    "on-click-right": "kitty --class wm-floating --title all_is_kitty --hold --detach sh -c 'nvidia-smi'"
   },
   "memory": {
     "interval": 2,
@@ -85,7 +85,7 @@
     "tooltip": true,
     "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB",
     "on-click": "missioncenter",
-    "on-click-right": "alacritty --start-as=fullscreen --title all_is_kitty sh -c 'btop'"
+    "on-click-right": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'"
   },
   "temperature": {
     "interval": 2,
@@ -98,7 +98,7 @@
     "format": " {free}",
     "format-alt": " {percentage_used}% ({free})",
     "tooltip": true,
-    "on-click-right": "alacritty --start-as=fullscreen --title all_is_kitty sh -c 'ncdu'",
+    "on-click-right": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'ncdu'",
     // "on-click-right": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
     "interval": 10
   },
@@ -139,13 +139,12 @@
     "max-length": 32,
     "rewrite": {
       "(.*)fish": "> [$1]",
-      "(.*)neovide": "neovide 󰕷 ", // doesn't seem to work
+      "(.*)neovim": "neovim 󰕷 ", // doesn't seem to work
       "(.*)Mozilla Firefox": "Firefox 󰈹",
       "(.*)BlueMail": "BlueMail 󰊫 ",
       "(.*)Visual Studio Code": "Code 󰨞",
       "(.*)Dolphin": "$1 󰉋",
       "(.*)Spotify": "Spotify 󰓇"
-      // "(.*)Steam": "Steam 󰓓"
     }
   },
   "persistent-workspaces": {

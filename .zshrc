@@ -112,19 +112,27 @@ alias gpl="git pull"
 alias gf="git fetch"
 alias conf="cd ~/.config"
 alias gm="git merge"
-alias l="exa"
-alias lla="exa -la"
+alias l="eza"
+alias lla="eza -la"
 alias dots="v ~/dots/"
 alias vc="nvim $XDG_CONFIG_HOME"
 alias auge="cd ~/work/auge/"
-alias emr="cd ~/uni/Emerald"
+alias jud="cd ~/uni/Judas"
 alias updall="sudo pacman -Syu"
+alias jus="julia --project=." 
  
+alias sss="source ~/dots/.zshrc"
 # spotify 
 alias sapply="spicetify apply"
 alias stheme="spicetify config current_theme"
 alias sswitch="spicetify config color_scheme"
 
+alias sfi="ssh jorgenaf@eccel02.ies.ntnu.no"
+
+alias popo="poetry run poe dev"
+
+
+alias mandoc="compgen -c | fzf | xargs man"
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
@@ -139,6 +147,7 @@ path=(
 )
 export PATH
 export CUDA_HOME="/opt/cuda/"
+export LD_LIBRARY_PATH="/opt/cuda/"
 
 # <<< juliaup initialize <<<
 

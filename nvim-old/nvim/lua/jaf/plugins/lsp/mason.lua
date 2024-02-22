@@ -8,6 +8,10 @@ return {
 		-- import mason
 		local mason = require("mason")
 
+		local keymap = vim.keymap
+
+        keymap.set("n", "<leader>m", "<cmd>Mason<CR>")
+
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
 
@@ -31,13 +35,12 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
-				"jdtls",
 				"lua_ls",
-				"julials",
-				"graphql",
 				"emmet_ls",
-				"prismals",
 				"pyright",
+                "julials",
+                "rust_analyzer",
+                "clangd",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed

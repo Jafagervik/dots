@@ -22,6 +22,7 @@ key.set("i", "<C-s>", "<Esc>:w<CR>")
 -- greatest remap ever
 key.set("x", "<leader>p", [["_dP]])
 
+
 -- next greatest remap ever : asbjornHaland
 key.set({ "n", "v" }, "<leader>y", [["+y]])
 key.set("n", "<leader>Y", [["+Y]])
@@ -39,24 +40,19 @@ key.set("n", "<leader>fo", vim.lsp.buf.format)
 
 -- julia help me ples
 key.set("n", "<leader>fj", "<cmd>JuliaFormatterFormat<CR>")
-key.set("n", "<leader>ma", "<cmd>Mason<CR>")
 
 key.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 key.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 key.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 key.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-key.set("n", "<leader>ps", "<cmd>PackerSync<CR>zz")
-
 --- what the fuck
 key.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 key.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-key.set("n", "<leader>vpp", "<cmd>e ~/dots/nvim/lua/jaf/packer.lua<CR>")
-
 -- reload
 key.set("n", "<leader>re", function()
-	vim.cmd("so")
+    vim.cmd("so")
 end)
 
 -- latex
