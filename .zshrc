@@ -121,7 +121,7 @@ alias jud="cd ~/uni/Judas"
 alias updall="sudo pacman -Syu"
 alias jus="julia --project=." 
  
-alias sss="source ~/dots/.zshrc"
+alias sc="source ~/dots/.zshrc"
 # spotify 
 alias sapply="spicetify apply"
 alias stheme="spicetify config current_theme"
@@ -130,6 +130,7 @@ alias sswitch="spicetify config color_scheme"
 alias sfi="ssh jorgenaf@eccel02.ies.ntnu.no"
 
 alias popo="poetry run poe dev"
+alias c="clear"
 
 
 alias mandoc="compgen -c | fzf | xargs man"

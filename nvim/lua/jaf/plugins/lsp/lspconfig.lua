@@ -93,7 +93,10 @@ return {
 			on_attach = on_attach,
 		})
 
-		lspconfig["jdtls"].setup({})
+		lspconfig["jdtls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
 		-- configure graphql language server
 		lspconfig["graphql"].setup({
@@ -111,6 +114,12 @@ return {
 
 		-- configure python server
 		lspconfig["pyright"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure go server
+		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
